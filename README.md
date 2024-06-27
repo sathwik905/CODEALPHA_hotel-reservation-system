@@ -42,8 +42,7 @@ Main Class (HotelReservationSystem): Acts as the entry point for the program. It
  5.Exit : Allows users to exit the program.
 
 
-
-This system utilizes object-oriented programming principles such as encapsulation (private attributes and public methods), inheritance (if extending room types or guest details), and polymorphism (through method overrides or interfaces). It offers a structured approach to managing hotel bookings, enhancing user experience through efficient room search, booking, and reservation management functionalities. Extensions could include user authentication, database integration for persistent data storage, or a graphical user interface for enhanced usability.
+ It offers a structured approach to managing hotel bookings, enhancing user experience through efficient room search, booking, and reservation management functionalities. Extensions could include user authentication, database integration for persistent data storage, or a graphical user interface for enhanced usability.
 
 # screenshots:
 
