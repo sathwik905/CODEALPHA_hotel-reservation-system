@@ -2,14 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-// Room class
 class Room {
     private int roomNumber;
     private String type;
     private double price;
     private boolean isAvailable;
 
-    // Constructor
     public Room(int roomNumber, String type, double price) {
         this.roomNumber = roomNumber;
         this.type = type;
@@ -17,7 +15,6 @@ class Room {
         this.isAvailable = true; // Room is initially available
     }
 
-    // Getters
     public int getRoomNumber() {
         return roomNumber;
     }
@@ -30,12 +27,10 @@ class Room {
         return price;
     }
 
-    // Method to check availability
     public boolean isAvailable() {
         return isAvailable;
     }
 
-    // Method to book the room
     public void bookRoom() {
         if (isAvailable) {
             isAvailable = false;
@@ -46,25 +41,17 @@ class Room {
     }
 }
 
-// Hotel class
 class Hotel {
     private List<Room> rooms;
-
-    // Constructor
     public Hotel() {
         this.rooms = new ArrayList<>();
-        initializeRooms(); // Initialize rooms for the hotel
+        initializeRooms();
     }
-
-    // Method to initialize rooms (dummy data for demonstration)
     private void initializeRooms() {
         rooms.add(new Room(101, "Single", 100.0));
         rooms.add(new Room(102, "Double", 150.0));
         rooms.add(new Room(103, "Suite", 250.0));
-        // Add more rooms as needed
     }
-
-    // Method to search for available rooms by type
     public List<Room> searchAvailableRooms(String type) {
         List<Room> availableRooms = new ArrayList<>();
         for (Room room : rooms) {
@@ -74,8 +61,6 @@ class Hotel {
         }
         return availableRooms;
     }
-
-    // Method to book a room
     public void bookRoom(int roomNumber) {
         for (Room room : rooms) {
             if (room.getRoomNumber() == roomNumber) {
@@ -86,29 +71,21 @@ class Hotel {
         System.out.println("Room " + roomNumber + " not found or already booked.");
     }
 }
-
-// Reservation class
 class Reservation {
     private int reservationId;
     private String guestName;
     private Room bookedRoom;
     private boolean isPaid;
-
-    // Constructor
     public Reservation(int reservationId, String guestName, Room bookedRoom) {
         this.reservationId = reservationId;
         this.guestName = guestName;
         this.bookedRoom = bookedRoom;
-        this.isPaid = false; // Reservation is initially unpaid
+        this.isPaid = false; 
     }
-
-    // Method to mark reservation as paid
     public void markAsPaid() {
         isPaid = true;
         System.out.println("Reservation " + reservationId + " has been paid.");
     }
-
-    // Method to display reservation details
     public void displayDetails() {
         System.out.println("Reservation ID: " + reservationId);
         System.out.println("Guest Name: " + guestName);
@@ -118,8 +95,6 @@ class Reservation {
         System.out.println("Payment Status: " + (isPaid ? "Paid" : "Pending"));
     }
 }
-
-// Main class
 public class HotelReservationSystem {
     public static void main(String[] args) {
         Hotel hotel = new Hotel();
@@ -134,7 +109,7 @@ public class HotelReservationSystem {
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline character
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
@@ -180,12 +155,10 @@ public class HotelReservationSystem {
     }
 
     private static void payForReservation(Scanner scanner) {
-        // Implementation can be added based on Reservation class
         System.out.println("Payment feature is under development.");
     }
 
     private static void viewBookingDetails(Scanner scanner) {
-        // Implementation can be added based on Reservation class
         System.out.println("View booking details feature is under development.");
     }
 }
