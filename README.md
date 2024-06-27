@@ -28,7 +28,7 @@ Reservation Class: Represents a booking made by a guest. It includes attributes 
 
 
 
-Main Class (HotelReservationSystem): Acts as the entry point for the program. It provides a user interface via the command line or GUI, allowing users to:
+Main Class (HotelReservationSystem): Acts as the entry point for the program. It provides a user interface via the command line , allowing users to:
  1.Search Available Rooms: Users can specify room type (single, double, suite) and view available options.
  
  2.Book a Room: Users select a room by entering its number, and the system confirms the booking if the room is available.
