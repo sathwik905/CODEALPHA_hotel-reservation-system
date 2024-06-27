@@ -12,7 +12,7 @@ class Room {
         this.roomNumber = roomNumber;
         this.type = type;
         this.price = price;
-        this.isAvailable = true; // Room is initially available
+        this.isAvailable = true;
     }
 
     public int getRoomNumber() {
